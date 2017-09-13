@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Launcher } from '../containers';
 
 function App() {
   const widgetClasses = classNames('erxes-widget');
 
   return (
     <div className={widgetClasses}>
-
-      <Launcher />
+      <div>
+        Live room test
+      </div>
     </div>
   );
 }
@@ -19,7 +19,6 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  uiOptions: null,
 };
 
 export default App;

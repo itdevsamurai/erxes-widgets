@@ -8,7 +8,7 @@ import client, { createStore } from './apollo-client';
 // base connect function for all widgets
 const widgetConnect = (params) => {
   const {
-    postParams,
+    // postParams,
     connectMutation,
     connectCallback,
     AppContainer,
@@ -31,13 +31,13 @@ const widgetConnect = (params) => {
       connectCallback(data);
 
       // notify parent window that connected
-      window.parent.postMessage({
-        fromErxes: true,
-        ...postParams,
-        action: 'connected',
-        connectionInfo: data,
-        setting: event.data.setting,
-      }, '*');
+      // window.parent.postMessage({
+      //   fromErxes: true,
+      //   ...postParams,
+      //   action: 'connected',
+      //   connectionInfo: data,
+      //   setting: event.data.setting,
+      // }, '*');
 
       // render root react component
       ReactDOM.render(

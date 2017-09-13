@@ -41,6 +41,10 @@ app.get('/form', (req, res) => {
   res.render('widget', { type: 'form' });
 });
 
+app.get('/liveRoom', (req, res) => {
+  res.render('widget', { type: 'liveRoom' });
+});
+
 app.get('/test', (req, res) => {
   res.render('widget-test');
 });
