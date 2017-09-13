@@ -13,6 +13,8 @@ export default {
     messengerWidget: './client/messenger/widget/index.js',
     form: './client/form/index.js',
     formWidget: './client/form/widget/index.js',
+    liveRoom: './client/live_calls/video/index.js',
+    liveRoomWidget: './client/live_calls/video/widget/index.js',
   },
 
   output: {
