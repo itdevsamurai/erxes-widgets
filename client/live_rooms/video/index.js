@@ -23,7 +23,7 @@ widgetConnect({
 
   connectCallback: (data) => {
     console.log('you reached connectCallback, gratz!');
-    console.log('oh and we data: ', data);
+    console.log('oh and we have data: ', data);
   },
 
   // connectCallback: (data) => {

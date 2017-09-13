@@ -13,8 +13,8 @@ meta.name = 'viewport';
 meta.content = 'initial-scale=1, width=device-width';
 document.getElementsByTagName('head')[0].appendChild(meta);
 
-const iframeId = 'erxes-knowledge-iframe';
-const container = 'erxes-knowledge-container';
+const iframeId = 'erxes-live-room-iframe';
+const container = 'erxes-live-room-container';
 
 // container
 const erxesContainer = document.createElement('div');
