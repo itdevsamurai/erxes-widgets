@@ -17,6 +17,8 @@ widgetConnect({
 
     connection.setting = setting;
 
+    console.log('connection: ', connection);
+
     // call connect mutation
     return connect(setting.brandCode);
   },

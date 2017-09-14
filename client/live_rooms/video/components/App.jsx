@@ -1,9 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import Video from 'twilio-video';
 import classNames from 'classnames';
 import './App.css';
 
-class App extends Component {
+const propTypes = {
+  liveRoom: PropTypes.shape({
+    status: PropTypes.string,
+    participantOne: PropTypes.string,
+    participantTwo: PropTypes.string,
+    token: PropTypes.string,
+    identity: PropTypes.string,
+  }),
+}
+
+class App extends React.Component {
   // Activity log.
   log(message) {
     const logDiv = document.getElementById('log');
@@ -33,6 +44,8 @@ class App extends Component {
     this.state = {
       previewTracks: null,
       activeRoom: null,
+      token: this.props.liveRoom.token,
+      identity: this.props.liveRoom.identity,
     };
 
     this.handlePreviewButtonClick = this.handlePreviewButtonClick.bind(this);
@@ -40,6 +53,8 @@ class App extends Component {
     this.handleLeaveRoomButtonClick = this.handleLeaveRoomButtonClick.bind(this);
     this.roomJoined = this.roomJoined.bind(this);
     // this.log = this.log.bind(this);
+
+    console.log('App.jsx.props: ', props);
   }
 
   componentDidMount() {
@@ -212,5 +227,7 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = propTypes;
 
 export default App;
